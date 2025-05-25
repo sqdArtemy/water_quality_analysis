@@ -12,8 +12,8 @@ Kit for Rural Uzbekistan**
 
 - **`data/`**: Data used to train the model
 - **`graphs/`**: Files of graphs generated in `.ipynby` file
-- **`model.ipynb`**: Notebook containing data analysis scripts and the Histogram-based Gradient Boosting Classification model to predict whether water is potable or not
-
+- **`model/`**: Contains notebook with data analysis scripts and the Histogram-based Gradient Boosting Classification model to predict whether water is potable or not; Additionally contains saved file of the model
+- **`gui.py`** File with simple GUI for more comfortable model interference
 ---
 
 ## Installation
@@ -44,10 +44,17 @@ If you plan to run it locally, follow this guide:
     All the dependencies can be observed in the file `pyproject.toml`
 
 ## Start the script
-**Run the model.ipynb**:
+1) **Run the model.ipynb**:
     - After previous steps are completed, you can run the Jupyter notebook. When everything is executed, you are able to observe data analysis and the results of the model interference.
     If you have any other dataset you can easily use it with the minimal changes to the code.
     P.S. All the graphs are saved to the `./graphs` directory.
+
+2) **Run the gui.py**
+    - By running this file you can access simple GUI for model interference on the URL: `localhost:8050`
+    - To run, use this command:
+        ```bash
+        uv run gui.py
+        ```
 
 ---
 
