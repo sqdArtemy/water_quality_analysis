@@ -117,11 +117,10 @@ def predict_potability(n_clicks, ph, hardness, tds, chloramines, sulfate, conduc
         'Turbidity': turbidity
     }])
     pred = model.predict(df_input)[0]
-    prob = model.predict_proba(df_input)[0][pred]
 
     if pred:
-        return f"✅ Safe to drink! Confidence: {prob*100:.1f}%"
-    return f"❌ Not safe to drink. Confidence: {prob*100:.1f}%"
+        return f"✅ Safe to drink!"
+    return f"❌ Not safe to drink."
 
 if __name__ == '__main__':
     app.run(debug=True)
