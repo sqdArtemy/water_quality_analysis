@@ -1,9 +1,9 @@
-# Machine Learning for Water Quality Assessment: Predicting Potability and Proposing a Low-Cost Monitoring Kit for Rural Uzbekistan
+# Machine Learning for Water Quality Assessment: Predicting Potability and Proposing a Low-Cost Measuring Kit for Rural Uzbekistan
 
 Welcome to an open-source repository providing source code for the paper:
 
 > **Machine Learning for Water Quality Assessment:
-Predicting Potability and Proposing a Low-Cost Monitoring
+Predicting Potability and Proposing a Low-Cost Measuring
 Kit for Rural Uzbekistan**  
 > by *Artyom Tashyan, Sarvar Bazarov, Samanbek Erkinov*
 
@@ -12,7 +12,7 @@ Kit for Rural Uzbekistan**
 
 - **`data/`**: Data used to train the model
 - **`graphs/`**: Files of graphs generated in `.ipynby` file
-- **`model/`**: Contains notebook with data analysis scripts and the Histogram-based Gradient Boosting Classification model to predict whether water is potable or not; Additionally contains saved file of the model
+- **`model/`**: Contains notebook with data analysis scripts and 3 models (HistGradientBoosting, XGBoost, RandomForest) to predict whether water is potable or not; Additionally contains saved file of the model
 - **`gui.py`** File with simple GUI for more comfortable model interference
 ---
 
@@ -69,13 +69,20 @@ If you plan to run it locally, follow this guide:
 ## Model results
 
 ### Accuracy comparison
-![Accuracy comparison](./graphs/model_accuracy_comparison.png)
+![Accuracy comparison](./graphs/model_accuracy_by_columns.png)
 
 ### F1-score comparison
-![Accuracy comparison](./graphs/f1_score_comparison.png)
+![F1-score comparison](./graphs/best_model_f1_scores.png)
 
 ### Confusion matrices
-![Accuracy comparison](./graphs/confusion_matrices.png)
+#### Confusion matrix Random Forest
+![Confusion matrix RF](./graphs/confusion_matrix_RandomForest.png)
+
+#### Confusion matrix HistGradientBoosting
+![Confusion matrix HistGradientBoosting](./graphs/confusion_matrix_HistGradientBoosting.png)
+
+#### Confusion matrix XGBoost
+![Confusion matrix XGBoost](./graphs/confusion_matrix_XGBoost.png)
 
 ---
 
